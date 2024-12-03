@@ -27,10 +27,11 @@ CXXSRC += main.cpp
 C_INCLUDES += -I$(CURDIR)/../../sdk/include -I$(CURDIR)/../../sdk/src
 
 EXTRA_OBJ := 
-LD_LIBS += -lstdc++ -lpthread
+LD_LIBS += -lstdc++ -lpthread -lpigpio  # Added pigpio library
 
 all: build_app
 
 include $(HOME_TREE)/mak_common.inc
 
 clean: clean_app
+
